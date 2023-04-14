@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="start.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="heading">
+        <h1 style="margin-bottom: 20px;" id="Message">You can do this!</h1>
+        <div id="app"></div>
+        <h2>You have 3 minutes to work on:</h2>
+        <h1 id="TaskName"></h1>
+    </div>
+
+    <script>
+        document.getElementById("TaskName").innerText = localStorage.getItem("Task");
+
+        const messages = [
+            "Keep going, you're doing great!",
+            "You're one step closer to your goal!",
+            "Every second counts, keep pushing!",
+            "Don't give up, you're almost there!",
+            "Believe in yourself, you can do it!",
+            "Keep up the good work, you're making progress!",
+            "You're on track to achieve your goals!",
+            "Every moment is an opportunity to succeed!",
+            "Stay focused and determined, you've got this!",
+            "Keep striving for success, you're making a difference!",
+            "You're capable of achieving anything you set your mind to!",
+            "You're doing an amazing job, keep it up!",
+            "Time is running out, hurry up!",
+            "You're falling behind, pick up the pace!",
+            "The clock is ticking, don't waste any more time!",
+            "You're not going to make it if you don't speed up!",
+            "The time is almost up, give it all you've got!",
+            "You're lagging behind, you need to catch up!",
+            "You're not doing enough, try harder!",
+            "You're not making progress fast enough!",
+            "You're running out of time, get moving!",
+            "You're not going to achieve your goal at this rate!",
+            "You're not working hard enough, step it up!",
+            "You need to push yourself harder to succeed.",
+            "You are the definition of useless.",
+            "You suck!",
+            "Your parents are disappointed in you!",
+            "You're going to end up homeless!",
+            "Even a third grader could do this!",
+            "You can't do this!",
+            "You're a waste of space!",
+            "You're going to get fired",
+            "I'm disappoined in you!",
+            "You're a waste of oxygen",
+            "Your future children are laughing at you!",
+            "I knew this wasn't meant to be",
+            "You are a failure!"
+        ];
+
+        let counter = 1;
+        const interval = setInterval(function () {
+            document.getElementById("Message").innerText = messages[counter];
+            counter++;
+        }, 5000);
+
+        const movePage = setInterval(function () {
+            window.location.href = "next.html"
+        }, 180000);
+    </script>
+</body>
+
+</html>
