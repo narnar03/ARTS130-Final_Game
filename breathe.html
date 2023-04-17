@@ -10,26 +10,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="start.css">
+    <link rel="stylesheet" href="breathe.css">
 </head>
 
-<body style="background-color: rgb(194, 255, 255);">
+<body style="background-size: cover; background-image: url('https://static.vecteezy.com/system/resources/previews/015/942/303/original/cartoon-sky-with-random-clouds-background-illustration-sky-design-free-vector.jpg')">
+    <div class="overlay"></div>
+    <img src="Bars.svg" alt="Jail Bars" class="bars">
     <div class="heading">
-        <h1 id="Message">Breathe in!</h1>
+        <h1 id="Message" style="color: white;">Breathe in!</h1>
     </div>
 
     <script>
-        message = ["Breathe out!", "Ok, back to work!"]
+        message = ["Breathe out!", "That break was longer than expected.", "Ok, back to work!"]
         counter = 0;
         const interval = setInterval(function () {
             document.getElementById("Message").innerText = message[counter];
-            document.getElementById("Message").style.color = "white";
-            document.querySelector("body").style.backgroundColor = "darkslategray";
             counter++;
         }, 2000);
 
         const movePage = setInterval(function () {
             window.location.href = "timer.html"
-        }, 6000);
+        }, 8000);
     </script>
 </body>
 
